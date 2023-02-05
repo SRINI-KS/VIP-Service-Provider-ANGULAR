@@ -1,0 +1,214 @@
+<mat-grid-list cols="2" rowHeight="100%">
+  <mat-card-title class="title">Register</mat-card-title>
+  <form [formGroup]="formValidService.userRegisterForms" (ngSubmit)="submitData()">
+    <mat-grid-tile>
+      <div class="container-class">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field appearance="outline" class="widt">
+                <mat-label>First Name</mat-label>
+                <input formControlName="userFname" name="userFname" [(ngModel)]="userRegisterModel.userFname" matInput required />
+                <mat-error>This field required</mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="widt">
+                <mat-label>Last Name</mat-label>
+                <input
+                  matInput
+                  formControlName="userLname"
+                  name="userLname" [(ngModel)]="userRegisterModel.userLname"
+                  required
+                />
+                <mat-error>This field required</mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <mat-form-field appearance="outline" class="widt">
+          <mat-label>Enter your Email</mat-label>
+          <input
+            matInput
+            placeholder="jack@example.com"
+            formControlName="email"
+            name="email" [(ngModel)]="userRegisterModel.email"
+            required
+          />
+          <mat-error>This field required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="widt">
+          <mat-label>Enter your password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            formControlName="password"
+            required
+            type="password"
+            name="password" [(ngModel)]="userRegisterModel.password"
+          />
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['password'].errors?.['required']">This field required</mat-error>
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['password'].errors?.['minLength(8)']">Minimun 8 characters required</mat-error>
+
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="widt">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" name="gender" [(ngModel)]="userRegisterModel.gender" required>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+          </mat-select>
+          <mat-error>This field required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field
+          hintLabel="Max 12 characters"
+          appearance="outline"
+          class="widt"
+        >
+          <mat-label>Enter Aadhar Number</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="12"
+            placeholder="1111 2222 3333"
+            formControlName="aadharNum"
+            name="aadharNum" [(ngModel)]="userRegisterModel.aadharNum"
+            required
+          />
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['aadharNum'].errors?.['required']">This field required</mat-error>
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['aadharNum'].errors?.['minLength']">Minimun 12 characters required
+          </mat-error>
+          <mat-hint align="end">{{ input.value.length }}/12</mat-hint>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="container-class-1">
+        <mat-form-field
+          hintLabel="Max 10 characters"
+          appearance="outline"
+          class="wid"
+        >
+          <mat-label>Enter Pan Number</mat-label>
+          <input
+            matInput
+            #inp
+            maxlength="10"
+            placeholder="ABCDEF1234"
+            formControlName="panNum"
+            name="panNum" [(ngModel)]="userRegisterModel.panNum"
+            required
+          />
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['panNum'].errors?.['required']">This field required</mat-error>
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['panNum'].errors?.['minLength']">Minimun 12 characters required
+          </mat-error>
+          <mat-hint align="end">{{ inp.value.length }}/10</mat-hint>
+         
+        </mat-form-field>
+
+        <p>
+          <mat-form-field appearance="outline" class="wid">
+            <mat-label>Address</mat-label>
+            <textarea
+              matInput
+              placeholder="Ex. 100 Main St"
+              formControlName="address"
+              name="address" [(ngModel)]="userRegisterModel.address"
+              required
+            ></textarea>
+            <mat-error>This field required</mat-error>
+          </mat-form-field>
+        </p>
+
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input
+                  matInput
+                  placeholder="Ex. San Francisco"
+                  formControlName="city"
+                  name="city" [(ngModel)]="userRegisterModel.city"
+                  required
+                />
+                <mat-error>This field required</mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline">
+                <mat-label>State</mat-label>
+                <input
+                  matInput
+                  placeholder="Ex. California"
+                  formControlName="state"
+                  name="state" [(ngModel)]="userRegisterModel.state"
+                  required
+                />
+                <mat-error>This field required</mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field appearance="outline">
+                <mat-label>Postal Code</mat-label>
+                <input
+                  matInput
+                  #postalCode
+                  [maxLength]="6"
+                  placeholder="Ex. 941053"
+                  formControlName="postalCode"
+                  name="postalCode" [(ngModel)]="userRegisterModel.postalCode"
+                  required
+                  
+                />
+                <mat-error>This field required</mat-error>
+                <mat-hint align="end"
+                  >{{ postalCode.value.length }} / 6</mat-hint
+                >
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline">
+                <mat-label>Country</mat-label>
+                <input
+                  matInput
+                  placeholder="India"
+                  formControlName="country"
+                  name="country" [(ngModel)]="userRegisterModel.country"
+                  required
+                />
+                <mat-error>This field required</mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <mat-form-field appearance="outline" class="widt">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="Category" name="category" [(ngModel)]="userRegisterModel.category" required>
+            <mat-option value="Provider">Provider</mat-option>
+            <mat-option value="Customer">Customer</mat-option>
+          </mat-select>
+          <mat-error>This field required</mat-error>
+        </mat-form-field>
+        <div class="btn">
+          <button type="submit" mat-raised-button color="primary" [disabled]="formValidService.userRegisterForms.invalid">Register</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </form>
+</mat-grid-list>

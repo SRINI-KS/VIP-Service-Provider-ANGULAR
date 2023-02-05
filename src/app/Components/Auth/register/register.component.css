@@ -1,0 +1,39 @@
+
+.container-class
+{
+  width:100%;
+  padding:10%;
+  height: 100%;
+}
+
+.container-class-1
+{
+  width:100%;
+  padding:10%;
+  height: 100%;
+  margin-right: 100px;
+}
+.container-class *{
+  margin:5px;
+}
+.container-class .widt {
+  width: 100%;
+}
+.container-class-1 *{
+
+  margin:5px;
+}
+.container-class-1 .wid{
+  width: 100%;
+}
+td{
+  padding-left: 5px;
+}
+.container-class-1 p{
+  margin-top: 30px;
+   
+}
+.title{
+  margin-left: 550px;
+  font-weight: bold;
+}

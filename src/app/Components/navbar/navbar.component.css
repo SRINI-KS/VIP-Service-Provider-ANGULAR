@@ -1,0 +1,28 @@
+.Container{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.Container a{
+    margin-left: 5px;
+    text-decoration: none;
+    background-color: rgb(129, 255, 200);
+}
+nav ul li button{
+    background-color: rgb(129, 255, 200);
+}
+ul{
+    display: flex;
+    line-height: 55px;
+    padding:0 40px;
+}
+ul li{
+    padding-left: 30px;
+}
+span{
+    line-height: 55px;
+}
