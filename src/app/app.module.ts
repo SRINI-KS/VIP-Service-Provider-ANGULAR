@@ -11,6 +11,7 @@ import { RegisterComponent } from './Components/Auth/register/register.component
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreProductsComponent } from './Components/Main/Products/Store/store-products/store-products.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
+    StoreProductsComponent
+    
     
   ],
   imports: [
