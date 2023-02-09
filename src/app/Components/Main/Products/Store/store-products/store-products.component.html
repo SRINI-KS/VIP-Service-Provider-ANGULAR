@@ -1,1 +1,5 @@
-<p>store-products works!</p>
+<div class="row">
+  <div *ngFor="let item of property" class="shadow-lg col-sm-4 p-3">
+    <app-store-card [prop]="item"></app-store-card>
+  </div>
+</div>

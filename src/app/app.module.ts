@@ -12,6 +12,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreProductsComponent } from './Components/Main/Products/Store/store-products/store-products.component';
+import { StoreCardComponent } from './Components/Main/Products/Store/store-card/store-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StoreProductsComponent } from './Components/Main/Products/Store/store-p
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    StoreProductsComponent
+    StoreProductsComponent,
+    StoreCardComponent
     
     
   ],
