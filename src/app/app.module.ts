@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreProductsComponent } from './Components/Main/Products/Store/store-products/store-products.component';
 import { StoreCardComponent } from './Components/Main/Products/Store/store-card/store-card.component';
+import { AddProductComponent } from './Components/Main/Products/Store/add-product/add-product.component';
+import { ProductDetailsComponent } from './Components/Main/Products/Store/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { StoreCardComponent } from './Components/Main/Products/Store/store-card/
     RegisterComponent,
     DashboardComponent,
     StoreProductsComponent,
-    StoreCardComponent
+    StoreCardComponent,
+    AddProductComponent,
+    ProductDetailsComponent
     
     
   ],
@@ -35,7 +39,7 @@ import { StoreCardComponent } from './Components/Main/Products/Store/store-card/
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [StoreProductsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

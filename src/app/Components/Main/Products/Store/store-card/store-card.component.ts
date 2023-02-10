@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PropertyData } from 'src/app/Models/Main/Property/property-data';
 
 @Component({
@@ -6,8 +6,11 @@ import { PropertyData } from 'src/app/Models/Main/Property/property-data';
   templateUrl: './store-card.component.html',
   styleUrls: ['./store-card.component.css']
 })
-export class StoreCardComponent {
+export class StoreCardComponent implements OnInit{
 
   @Input() prop!: PropertyData;
+  ngOnInit(){
+    console.log(this.prop.price)
+  }
 
 }

@@ -12,6 +12,7 @@ export class StoreProductsComponent implements OnInit {
 
   property: Array<PropertyData> = [];
 
+
   constructor(private propService:PropertyDataService){}
   ngOnInit(): void {
     this.getPropertyData(); 
@@ -21,9 +22,10 @@ export class StoreProductsComponent implements OnInit {
     
       (response:any)=>{
         this.property=response;
+        console.log(response)
       },
       (error:HttpErrorResponse)=>{
-        alert(error.error.message);
+        // alert(error.error.message);
       }
 
       );

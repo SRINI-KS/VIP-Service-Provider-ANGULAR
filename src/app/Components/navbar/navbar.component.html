@@ -1,12 +1,20 @@
 <div class="Container">
   <span>
-  <a mat-raised-button routerLink="/">Service Provider</a>
-</span>
+    <button mat-raised-button routerLink="/">Service Provider</button>
+  </span>
+  <div class="mainProduct">
+    <ul>
+      <li><button mat-raised-button  routerLink="/StoreProducts">Buy</button></li>
+      <li><button mat-raised-button  routerLink="/addProduct">Add Product</button></li>
+    </ul>
+  </div>
+ 
   <nav>
     <ul>
-      <li><a mat-raised-button (click)="login()">Login</a></li>
+      
+
+      <li><button mat-raised-button (click)="login()">Login</button></li>
       <li><button mat-raised-button (click)="register()">Register</button></li>
-      <li><a></a></li>
     </ul>
   </nav>
 </div>
