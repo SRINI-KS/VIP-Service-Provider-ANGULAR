@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PropertyData } from 'src/app/Models/Main/Property/property-data';
 import { PropertyDataService } from 'src/app/Services/Main/Property/property-data.service';
 
@@ -13,7 +14,8 @@ export class StoreProductsComponent implements OnInit {
   property: Array<PropertyData> = [];
 
 
-  constructor(private propService:PropertyDataService){}
+  constructor(private propService:PropertyDataService,private route:ActivatedRoute){}
+
   ngOnInit(): void {
     this.getPropertyData(); 
   }
@@ -22,10 +24,10 @@ export class StoreProductsComponent implements OnInit {
     
       (response:any)=>{
         this.property=response;
-        console.log(response)
+        console.log(this.route.snapshot.url.toString())
       },
       (error:HttpErrorResponse)=>{
-        // alert(error.error.message);
+        // alert(error.error.me ssage);
       }
 
       );

@@ -15,6 +15,7 @@ import { StoreProductsComponent } from './Components/Main/Products/Store/store-p
 import { StoreCardComponent } from './Components/Main/Products/Store/store-card/store-card.component';
 import { AddProductComponent } from './Components/Main/Products/Store/add-product/add-product.component';
 import { ProductDetailsComponent } from './Components/Main/Products/Store/product-details/product-details.component';
+import { ErrorPageComponent } from './Components/Error/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductDetailsComponent } from './Components/Main/Products/Store/produc
     StoreProductsComponent,
     StoreCardComponent,
     AddProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ErrorPageComponent
     
     
   ],
