@@ -12,23 +12,30 @@ import { LoginSpringService } from 'src/app/Services/Auth/Login/LoginSpring/logi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
+   userDetails:any={};
   loginUser:Login=new Login();
   constructor(public loginService:LoginSpringService,public dialogReference:MatDialogRef<LoginComponent>,private route:Router){}
-
+  
   login(){
     this.loginService.loginValidation(this.loginUser).subscribe(
       data=>{
         this.onClose()
         this.route.navigate(['/StoreProducts'])
+        
+       
       },
       (error:HttpErrorResponse)=>{
-        console.log(error.error.message)
         alert(error.error.message);
       }
     )
   }
   onClose(){
     this.dialogReference.close();
+  }
+
+  local(){
+    this.userDetails=Object.assign(this.userDetails,this.loginUser)
+    localStorage.setItem('user',JSON.stringify(this.userDetails))
+    console.log(this.loginUser)   
   }
 }

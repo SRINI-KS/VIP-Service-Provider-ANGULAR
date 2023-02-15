@@ -1,20 +1,39 @@
-<div class="Container">
+<!-- <div class="Container">
   <span>
-    <button mat-raised-button routerLink="/">Service Provider</button>
+    <a class="logo" routerLink="/">VIP</a>
   </span>
   <div class="mainProduct">
     <ul>
-      <li><button mat-raised-button  routerLink="/StoreProducts">Buy</button></li>
-      <li><button mat-raised-button  routerLink="/addProduct">Add Product</button></li>
+      <li>
+        <button mat-raised-button routerLink="/StoreProducts">Buy</button>
+      </li>
+      <li>
+        <button mat-raised-button routerLink="/addProduct">Add Product</button>
+      </li>
     </ul>
   </div>
- 
   <nav>
     <ul>
-      
-
       <li><button mat-raised-button (click)="login()">Login</button></li>
       <li><button mat-raised-button (click)="register()">Register</button></li>
     </ul>
   </nav>
-</div>
+</div> -->
+
+<!----------------------->
+<nav class="navbar">
+  
+  <a href="#" class="logo"routerLink="/">VIP</a>
+  <input type="checkbox" id="toggler" />
+  <label for="toggler"><i class="fa-light fa-bars"></i>
+  </label>
+  <div class="menu">
+      <ul class="list">
+          <li><a routerLink="/StoreProducts">Buy</a></li>
+          <li><a routerLink="/addProduct">Add Product</a></li>
+          <li><a (click)="login()">Login</a></li>
+          <li><a (click)="register()">Register</a></li>
+
+      </ul>
+  </div>
+</nav>
