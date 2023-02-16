@@ -12,6 +12,7 @@ export class ValRegisterService {
     userLname:new FormControl('',[Validators.required]),
     email:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required,Validators.minLength(8)]),
+    phoneNumber:new FormControl('',[Validators.required,Validators.minLength(10)]),
     gender:new FormControl('',[Validators.required]),
     aadharNum:new FormControl('',[Validators.required,Validators.minLength(12)]),
     panNum:new FormControl('',[Validators.required,Validators.minLength(10)]),

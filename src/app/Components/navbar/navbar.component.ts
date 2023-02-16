@@ -9,9 +9,9 @@ import { RegisterComponent } from '../Auth/register/register.component';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private dialog:MatDialog){
+  constructor(private dialog:MatDialog){ }
 
-  }
+  items=["profile","logout"]
 
   register() {
     this.dialog.open(RegisterComponent, {
@@ -25,6 +25,14 @@ export class NavbarComponent {
     height: "60%",
       
     });
+  }
+
+  loggedin(){
+    return localStorage.getItem('UserLogin')
+  }
+  logOut(){
+    localStorage.removeItem('UserLogin')
+    
   }
 
 }

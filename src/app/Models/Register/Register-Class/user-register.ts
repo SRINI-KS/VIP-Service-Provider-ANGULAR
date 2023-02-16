@@ -4,6 +4,7 @@ export class UserRegister {
     userLname?:string;
     email?:string;
     password?:string;
+    phoneNumber?:string;
     gender?:string;
     aadharNum?:string;
     panNum?:string;

@@ -59,6 +59,9 @@ span{
     color: black;
 
 }
+.navbar a:hover{
+    cursor: pointer;
+}
 #toggler,
 .navbar label {
     display: none;

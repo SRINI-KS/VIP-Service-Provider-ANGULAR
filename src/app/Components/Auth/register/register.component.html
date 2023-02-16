@@ -63,6 +63,28 @@
           </button>
         </mat-form-field>
 
+        <mat-form-field
+          hintLabel="Max 10 characters"
+          appearance="outline"
+          class="widt"
+        >
+          <mat-label>Enter Moblile Number</mat-label>
+          <input
+            matInput
+            #input
+            type="number"
+            maxlength="10"
+            placeholder="9999 888 777"
+            formControlName="phoneNumber"
+            name="phoneNumber" [(ngModel)]="userRegisterModel.phoneNumber"
+            required
+          />
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['phoneNumber'].errors?.['required']">This field required</mat-error>
+          <mat-error *ngIf="formValidService.userRegisterForms.controls['phoneNumber'].errors?.['minLength']">Minimun 10 characters required
+          </mat-error>
+          <mat-hint align="end">{{ input.value.length }}/12</mat-hint>
+        </mat-form-field>
+
         <mat-form-field appearance="outline" class="widt">
           <mat-label>Gender</mat-label>
           <mat-select formControlName="gender" name="gender" [(ngModel)]="userRegisterModel.gender" required>
@@ -93,6 +115,7 @@
           <mat-hint align="end">{{ input.value.length }}/12</mat-hint>
         </mat-form-field>
       </div>
+
     </mat-grid-tile>
 
     <mat-grid-tile>

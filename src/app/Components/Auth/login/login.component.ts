@@ -5,6 +5,7 @@ import { Route, Router } from '@angular/router';
 import { Login } from 'src/app/Models/Login/LoginClass/login';
 import { UserRegister } from 'src/app/Models/Register/Register-Class/user-register';
 import { LoginSpringService } from 'src/app/Services/Auth/Login/LoginSpring/login-spring.service';
+import * as alertyfy from 'alertifyjs';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +13,24 @@ import { LoginSpringService } from 'src/app/Services/Auth/Login/LoginSpring/logi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-   userDetails:any={};
+   userDetails:UserRegister={};
+   loginUserLocalStore: UserRegister = new UserRegister;
   loginUser:Login=new Login();
   constructor(public loginService:LoginSpringService,public dialogReference:MatDialogRef<LoginComponent>,private route:Router){}
   
   login(){
     this.loginService.loginValidation(this.loginUser).subscribe(
-      data=>{
+      (response:Login)=>{
+        this.loginUserLocalStore=response
         this.onClose()
         this.route.navigate(['/StoreProducts'])
+        alertyfy.success("login")
+        this.local();
         
        
       },
       (error:HttpErrorResponse)=>{
-        alert(error.error.message);
+        alertyfy.error("invalid")
       }
     )
   }
@@ -34,8 +39,21 @@ export class LoginComponent {
   }
 
   local(){
-    this.userDetails=Object.assign(this.userDetails,this.loginUser)
-    localStorage.setItem('user',JSON.stringify(this.userDetails))
-    console.log(this.loginUser)   
+    this.userDetails=Object.assign(this.userDetails,this.loginUserLocalStore)
+    this.addUserToLocal(this.userDetails)
+
+  }
+
+  addUserToLocal(userDetails: UserRegister){
+         let userLoginInfo=[]
+         if(localStorage.getItem('userLoginInfo')){
+          userLoginInfo=JSON.parse(String(localStorage.getItem('userLoginInfo')));
+          userLoginInfo=[userDetails,...userLoginInfo]
+         }
+         else{
+          userLoginInfo=[userDetails]
+         }
+
+    localStorage.setItem('UserLogin',JSON.stringify(userLoginInfo));
   }
 }

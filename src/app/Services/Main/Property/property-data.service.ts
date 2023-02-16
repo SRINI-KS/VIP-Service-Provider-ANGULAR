@@ -8,7 +8,7 @@ import { PropertyData } from 'src/app/Models/Main/Property/property-data';
 })
 export class PropertyDataService {
 
-  baseUrl="http://localhost:9090"
+  baseUrl="http://localhost:8080"
   constructor(private http:HttpClient) { }
 
   public getData():Observable<PropertyData[]>{
