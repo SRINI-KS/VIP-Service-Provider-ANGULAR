@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
@@ -39,8 +38,7 @@ import { ErrorPageComponent } from './Components/Error/error-page/error-page.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BsDropdownModule.forRoot(),
-    BrowserAnimationsModule
+    
   ],
   providers: [StoreProductsComponent],
   bootstrap: [AppComponent]

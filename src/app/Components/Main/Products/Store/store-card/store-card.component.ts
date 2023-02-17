@@ -10,7 +10,6 @@ export class StoreCardComponent implements OnInit{
 
   @Input() prop!: PropertyData;
   ngOnInit(){
-    console.log(this.prop.price)
   }
 
 }

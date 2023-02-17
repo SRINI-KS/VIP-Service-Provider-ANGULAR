@@ -24,7 +24,6 @@ export class StoreProductsComponent implements OnInit {
     
       (response:any)=>{
         this.property=response;
-        console.log(this.route.snapshot.url.toString())
       },
       (error:HttpErrorResponse)=>{
         // alert(error.error.me ssage);

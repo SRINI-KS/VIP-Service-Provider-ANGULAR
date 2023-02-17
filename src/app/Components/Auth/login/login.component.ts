@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Login } from 'src/app/Models/Login/LoginClass/login';
 import { UserRegister } from 'src/app/Models/Register/Register-Class/user-register';
 import { LoginSpringService } from 'src/app/Services/Auth/Login/LoginSpring/login-spring.service';
@@ -12,16 +12,21 @@ import * as alertyfy from 'alertifyjs';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  sendUserName:string="";
    userDetails:UserRegister={};
    loginUserLocalStore: UserRegister = new UserRegister;
   loginUser:Login=new Login();
   constructor(public loginService:LoginSpringService,public dialogReference:MatDialogRef<LoginComponent>,private route:Router){}
+  ngOnInit(): void {
   
+  }
   login(){
     this.loginService.loginValidation(this.loginUser).subscribe(
       (response:Login)=>{
         this.loginUserLocalStore=response
+    
+      
         this.onClose()
         this.route.navigate(['/StoreProducts'])
         alertyfy.success("login")
@@ -40,6 +45,8 @@ export class LoginComponent {
 
   local(){
     this.userDetails=Object.assign(this.userDetails,this.loginUserLocalStore)
+    this.sendUserName=String(this.userDetails.userFname)
+    console.log(this.userDetails.userFname)
     this.addUserToLocal(this.userDetails)
 
   }
@@ -53,7 +60,7 @@ export class LoginComponent {
          else{
           userLoginInfo=[userDetails]
          }
-
+  
     localStorage.setItem('UserLogin',JSON.stringify(userLoginInfo));
   }
 }
