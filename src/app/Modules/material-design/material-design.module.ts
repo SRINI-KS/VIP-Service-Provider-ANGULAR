@@ -10,6 +10,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const materialDesignComponents = [MatButtonModule,
   MatFormFieldModule,
@@ -20,7 +21,8 @@ const materialDesignComponents = [MatButtonModule,
   MatSelectModule,
   MatCardModule,
   MatSnackBarModule,
-  MatMenuModule
+  MatMenuModule,
+  MatTabsModule
   ];
 
 @NgModule({

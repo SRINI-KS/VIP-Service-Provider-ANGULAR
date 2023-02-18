@@ -9,11 +9,13 @@ import { StoreProductsComponent } from '../store-products/store-products.compone
 })
 export class AddProductComponent {
 
-  constructor(private route:Router,private store:StoreProductsComponent){}
+  // constructor(private route:Router,private store:StoreProductsComponent){}
 
-  onBack(){
-    this.route.navigate(['/StoreProducts'])
-    this.store.getPropertyData()
-  }
+  // onBack(){
+  //   this.route.navigate(['/StoreProducts'])
+  //   this.store.getPropertyData()
+  // }
+
+  
   
 }
