@@ -1,5 +1,11 @@
 .body{
     height: 100%;
     width: 100%;
-    background-color: aquamarine;
 }
+.photo-control {
+    min-height: 300px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px dashed blue;
+    margin: 5px;
+  }

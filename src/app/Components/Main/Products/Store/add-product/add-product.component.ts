@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { StoreProductsComponent } from '../store-products/store-products.component';
 
 @Component({
@@ -8,6 +10,13 @@ import { StoreProductsComponent } from '../store-products/store-products.compone
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
+  @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
+ 
+  selectTab(tabId: number) {
+    if (this.staticTabs?.tabs[tabId]) {
+      this.staticTabs.tabs[tabId].active = true;
+    }
+  }
 
   // constructor(private route:Router,private store:StoreProductsComponent){}
 
@@ -16,6 +25,5 @@ export class AddProductComponent {
   //   this.store.getPropertyData()
   // }
 
-  
-  
+
 }

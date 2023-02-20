@@ -18,7 +18,7 @@
       <li *ngIf="loggedin()">
         <a  [matMenuTriggerFor]="menu">Welcome {{userNameForWelcome}}</a>
       <mat-menu #menu="matMenu">
-        <a mat-menu-item>Item 1</a>
+        <a mat-menu-item>Profile</a>
         <li ><a (click)="logOut()" mat-menu-item>LogOut</a></li>
         
       </mat-menu>
