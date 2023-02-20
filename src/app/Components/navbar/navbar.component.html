@@ -1,28 +1,12 @@
-<!-- <div class="Container">
-  <span>
-    <a class="logo" routerLink="/">VIP</a>
-  </span>
-  <div class="mainProduct">
-    <ul>
-      <li>
-        <button mat-raised-button routerLink="/StoreProducts">Buy</button>
-      </li>
-      <li>
-        <button mat-raised-button routerLink="/addProduct">Add Product</button>
-      </li>
-    </ul>
-  </div>
-  <nav>
-    <ul>
-      <li><button mat-raised-button (click)="login()">Login</button></li>
-      <li><button mat-raised-button (click)="register()">Register</button></li>
-    </ul>
-  </nav>
-</div> -->
 
-<!----------------------->
 <nav class="navbar">
-  <a href="#" class="logo" routerLink="/">VIP</a>
+  <ul>
+    <li>
+      <a class="logo" routerLink="/">VIP</a>
+
+    </li>
+  </ul>
+  
   <input type="checkbox" id="toggler" />
   <label for="toggler"><i class="fa-light fa-bars"></i> </label>
   <div class="menu">
@@ -31,7 +15,6 @@
       <li><a routerLink="/addProduct">Add Product</a></li>
       <li *ngIf="!loggedin()"><a (click)="login()">Login</a></li>
       <li *ngIf="!loggedin()"><a (click)="register()">Register</a></li>
-      <!-- <li *ngIf="loggedin()"><a (click)="logOut()">LogOut</a></li> -->
       <li *ngIf="loggedin()">
         <a  [matMenuTriggerFor]="menu">Welcome {{userNameForWelcome}}</a>
       <mat-menu #menu="matMenu">

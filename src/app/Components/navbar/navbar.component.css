@@ -1,37 +1,6 @@
-.Container{
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-    margin-bottom: 35px;
-    font-weight: bold;
-    /* border:0 1px solid gray ; */
-    border-radius: 10px;
-    /* box-shadow: 10px 10px 5px rgb(123, 128, 123); */
-    
-}
 
-.Container button{
-    margin-left: 5px;
-    text-decoration: none;
-    background-color: rgb(129, 255, 200);
-}
-nav ul li button{
-    background-color: rgb(129, 255, 200);
-}
-ul{
-    display: flex;
-    line-height: 55px;
-    padding:0 40px;
-}
-ul li{
-    padding-left: 30px;
-}
-span{
 
-    line-height: 55px;
-    
-}
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -44,14 +13,20 @@ span{
     background-color:black;
     height: 70px;
 }
-.navbar a {
+.navbar a{
     text-decoration: none;
-    color: rgb(129, 255, 200);
+    color:white;
     margin: 5px;
+    /* padding-right: 30px; */
+    line-height: 60px;
+    font-size: large;
 }
-.logo {
-    margin-right: 50px;
+
+.logo{
+    font-size: xx-large!important;
+
 }
+
 .list {
     list-style: none;
     display: flex;
@@ -61,6 +36,7 @@ span{
 }
 .navbar a:hover{
     cursor: pointer;
+    border-bottom: 5px solid aquamarine ;
 }
 #toggler,
 .navbar label {
