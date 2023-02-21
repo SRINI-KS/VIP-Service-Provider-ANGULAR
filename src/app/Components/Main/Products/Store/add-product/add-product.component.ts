@@ -19,12 +19,7 @@ export class AddProductComponent {
   }
   productView={};
 
-  // constructor(private route:Router,private store:StoreProductsComponent){}
 
-  // onBack(){
-  //   this.route.navigate(['/StoreProducts'])
-  //   this.store.getPropertyData()
-  // }
 
 
 }
