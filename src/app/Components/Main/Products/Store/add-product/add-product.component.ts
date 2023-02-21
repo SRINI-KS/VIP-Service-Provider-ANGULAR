@@ -17,6 +17,7 @@ export class AddProductComponent {
       this.staticTabs.tabs[tabId].active = true;
     }
   }
+  productView={};
 
   // constructor(private route:Router,private store:StoreProductsComponent){}
 

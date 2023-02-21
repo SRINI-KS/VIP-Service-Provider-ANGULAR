@@ -11,9 +11,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
-// ngx bootstrap
-import { TabsModule } from 'ngx-bootstrap/tabs';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 const materialDesignComponents = [MatButtonModule,
   MatFormFieldModule,
@@ -26,9 +23,7 @@ const materialDesignComponents = [MatButtonModule,
   MatSnackBarModule,
   MatMenuModule,
   MatTabsModule,
-  // ngx-bootstrap
-  TabsModule.forRoot(),
-  BsDatepickerModule.forRoot()
+
 
   ];
 

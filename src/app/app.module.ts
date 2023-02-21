@@ -15,6 +15,8 @@ import { StoreCardComponent } from './Components/Main/Products/Store/store-card/
 import { AddProductComponent } from './Components/Main/Products/Store/add-product/add-product.component';
 import { ProductDetailsComponent } from './Components/Main/Products/Store/product-details/product-details.component';
 import { ErrorPageComponent } from './Components/Error/error-page/error-page.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { ErrorPageComponent } from './Components/Error/error-page/error-page.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TabsModule.forRoot(),
+    BsDatepickerModule.forRoot()
     
     
   ],

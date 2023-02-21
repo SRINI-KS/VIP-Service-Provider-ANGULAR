@@ -8,7 +8,7 @@ import { PropertyData } from 'src/app/Models/Main/Property/property-data';
 })
 export class StoreCardComponent implements OnInit{
 
-  @Input() prop!: PropertyData;
+  @Input() prop!: PropertyData|any;
   ngOnInit(){
   }
 
