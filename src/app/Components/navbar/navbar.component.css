@@ -38,6 +38,9 @@
     cursor: pointer;
     border-bottom: 5px solid aquamarine ;
 }
+ul{
+    margin-right: 10px;
+}
 #toggler,
 .navbar label {
     display: none;

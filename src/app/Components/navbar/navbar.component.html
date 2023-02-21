@@ -2,7 +2,7 @@
 <nav class="navbar">
   <ul>
     <li>
-      <a class="logo" routerLink="/">VIP</a>
+      <a class="logo" routerLink="/">Service Provider</a>
 
     </li>
   </ul>
@@ -11,16 +11,15 @@
   <label for="toggler"><i class="fa-light fa-bars"></i> </label>
   <div class="menu">
     <ul class="list">
-      <li><a routerLink="/StoreProducts">Buy</a></li>
-      <li><a routerLink="/addProduct">Add Product</a></li>
+      <li><a routerLink="/StoreProducts">Customer Query</a></li>
+      <li><a routerLink="/addProduct">Add Service</a></li>
       <li *ngIf="!loggedin()"><a (click)="login()">Login</a></li>
       <li *ngIf="!loggedin()"><a (click)="register()">Register</a></li>
       <li *ngIf="loggedin()">
-        <a  [matMenuTriggerFor]="menu">Welcome {{userNameForWelcome}}</a>
+        <a  [matMenuTriggerFor]="menu">{{userNameForWelcome|uppercase}}</a>
       <mat-menu #menu="matMenu">
-        <a mat-menu-item>Profile</a>
+       <li> <button mat-menu-item>Profile</button></li>
         <li ><a (click)="logOut()" mat-menu-item>LogOut</a></li>
-        
       </mat-menu>
       </li>
       

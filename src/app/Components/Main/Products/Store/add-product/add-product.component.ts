@@ -18,7 +18,6 @@ export class AddProductComponent {
     }
   }
   productView={};
-// testing
 
 
 
