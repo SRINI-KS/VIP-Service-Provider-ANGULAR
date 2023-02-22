@@ -9,6 +9,7 @@ import { PropertyData } from 'src/app/Models/Main/Property/property-data';
 export class StoreCardComponent implements OnInit{
 
   @Input() prop!: PropertyData|any;
+  @Input() hideIcons!:boolean;
   ngOnInit(){
   }
 
