@@ -17,6 +17,7 @@ import { ProductDetailsComponent } from './Components/Main/Products/Store/produc
 import { ErrorPageComponent } from './Components/Error/error-page/error-page.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ProfileComponent } from './Components/Main/Profile/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     StoreCardComponent,
     AddProductComponent,
     ProductDetailsComponent,
-    ErrorPageComponent,  
+    ErrorPageComponent,
+    ProfileComponent,  
     
   ],
   imports: [

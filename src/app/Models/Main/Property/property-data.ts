@@ -1,5 +1,7 @@
 export class PropertyData {
     id!:number;
     type!:string;
-    price!:string
+    price!:string;
+    image?:string;
+    
 }
