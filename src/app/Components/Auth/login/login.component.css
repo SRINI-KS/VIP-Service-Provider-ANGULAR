@@ -24,3 +24,6 @@
     position: relative;
     top: 0;
 }
+.register h6 a:hover{
+ cursor: pointer;
+}

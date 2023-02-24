@@ -1,11 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Login } from 'src/app/Models/Login/LoginClass/login';
 import { UserRegister } from 'src/app/Models/Register/Register-Class/user-register';
 import { LoginSpringService } from 'src/app/Services/Auth/Login/LoginSpring/login-spring.service';
 import * as alertyfy from 'alertifyjs';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
    userDetails:UserRegister={};
    loginUserLocalStore: UserRegister = new UserRegister;
   loginUser:Login=new Login();
-  constructor(public loginService:LoginSpringService,public dialogReference:MatDialogRef<LoginComponent>,private route:Router){}
+  constructor(public loginService:LoginSpringService,public dialogReference:MatDialogRef<LoginComponent>,private route:Router,private dialog:MatDialog){}
   ngOnInit(): void {
   
   }
@@ -62,5 +63,12 @@ export class LoginComponent implements OnInit {
          }
   
     localStorage.setItem('UserLogin',JSON.stringify(userLoginInfo));
+  }
+  register() {
+    this.dialog.closeAll()
+    this.dialog.open(RegisterComponent, {
+      width:"95%",
+      height:"90%"
+    });
   }
 }

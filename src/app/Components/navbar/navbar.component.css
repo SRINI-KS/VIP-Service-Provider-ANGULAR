@@ -15,7 +15,7 @@
 }
 .navbar a{
     text-decoration: none;
-    color:white;
+    color:rgb(0,229,155);
     margin: 5px;
     /* padding-right: 30px; */
     line-height: 60px;
@@ -34,10 +34,10 @@
     color: black;
 
 }
-.navbar a:hover{
+/* .navbar a:hover{
     cursor: pointer;
-    border-bottom: 5px solid aquamarine ;
-}
+    border-bottom: 5px solid rgb(0,229,155);
+} */
 ul{
     margin-right: 10px;
 }

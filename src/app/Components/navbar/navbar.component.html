@@ -27,7 +27,7 @@
       </li>
 <!-- ------------------- -->
       <li *ngIf="!loggedin()"><a (click)="login()">Login</a></li>
-      <li *ngIf="!loggedin()"><a (click)="register()">Register</a></li>
+      <!-- <li *ngIf="!loggedin()"><a (click)="register()">Register</a></li> -->
       <li *ngIf="loggedin()">
         <a [matMenuTriggerFor]="menu3">{{userNameForWelcome|uppercase}}</a>
         <mat-menu #menu3="matMenu">

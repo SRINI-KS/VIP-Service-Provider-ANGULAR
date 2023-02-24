@@ -5,6 +5,7 @@ import { UserRegister } from 'src/app/Models/Register/Register-Class/user-regist
 import { SpringRegisterService } from 'src/app/Services/Auth/Register/Spring-Register/spring-register.service';
 import { ValRegisterService } from 'src/app/Services/Auth/Register/valRegister/val-register.service';
 import * as alertyfy from 'alertifyjs';
+import { LoginComponent } from '../login/login.component';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,23 +18,30 @@ export class RegisterComponent {
   constructor(
     public formValidService: ValRegisterService,
     public urlService: SpringRegisterService,
-    public dialogReference: MatDialogRef<RegisterComponent>
+    public dialogReference: MatDialogRef<RegisterComponent>,
+    private dialog:MatDialog
   ) {}
   submitData() {
     this.urlService.createRegister(this.userRegisterModel).subscribe(
       (data) => {
         this.onClose();
-        alertyfy.success("saved")
+        alertyfy.success("Successfully Registerd")
+        this.login();
       },
       (error: HttpErrorResponse) => {
-        this.onClose();
-        // alert(error.message);
-        alertyfy.error("not saved")
+        alertyfy.error("Registration Failed")
       }
       
     );
   }
   onClose() {
     this.dialogReference.close();
+  }
+  login() {
+    this.dialog.open(LoginComponent, {
+      width: "30%",
+    height: "60%",
+      
+    });
   }
 }
