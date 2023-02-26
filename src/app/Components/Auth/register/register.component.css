@@ -1,5 +1,5 @@
 
-.container-class
+/* .container-class
 {
   width:100%;
   padding:10%;
@@ -36,4 +36,11 @@ td{
 .title{
   margin-left: 550px;
   font-weight: bold;
+} */
+.container{
+  display: flex;
+justify-content: center;
+}
+.example-card {
+  max-width: auto;
 }

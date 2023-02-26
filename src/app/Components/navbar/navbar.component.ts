@@ -19,12 +19,12 @@ userNameForWelcome:string="";
   ngOnInit(): void {
   }
 
-  register() {
-    this.dialog.open(RegisterComponent, {
-      width:"95%",
-      height:"90%"
-    });
-  }
+  // register() {
+  //   this.dialog.open(RegisterComponent, {
+  //     width:"95%",
+  //     height:"90%"
+  //   });
+  // }
   login() {
     this.dialog.open(LoginComponent, {
       width: "30%",

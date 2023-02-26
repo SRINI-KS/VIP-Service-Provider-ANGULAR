@@ -34,10 +34,10 @@
     color: black;
 
 }
-/* .navbar a:hover{
+.navbar a:hover{
     cursor: pointer;
     border-bottom: 5px solid rgb(0,229,155);
-} */
+}
 ul{
     margin-right: 10px;
 }

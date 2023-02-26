@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RegisterComponent } from './Components/Auth/register/register.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ErrorPageComponent } from './Components/Error/error-page/error-page.component';
 import { AddProductComponent } from './Components/Main/Products/Store/add-product/add-product.component';
@@ -9,6 +10,7 @@ import { ProfileComponent } from './Components/Main/Profile/profile/profile.comp
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
+  {path:'register',component:RegisterComponent},
   {path:'StoreProducts',component:StoreProductsComponent},
   {path:'profile',component:ProfileComponent},
   {path:'addProduct',component:AddProductComponent},

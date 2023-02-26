@@ -64,11 +64,10 @@ export class LoginComponent implements OnInit {
   
     localStorage.setItem('UserLogin',JSON.stringify(userLoginInfo));
   }
-  register() {
+
+  register(){
     this.dialog.closeAll()
-    this.dialog.open(RegisterComponent, {
-      width:"95%",
-      height:"90%"
-    });
+    this.route.navigate(['/register'])
+    
   }
 }
