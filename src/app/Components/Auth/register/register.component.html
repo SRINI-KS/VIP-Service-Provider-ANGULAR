@@ -247,7 +247,8 @@
   <form [formGroup]="formValidService.userRegisterForms" (ngSubmit)="submitData()">
   <mat-step>
     
-      <ng-template matStepLabel>Personal Details</ng-template>
+      <ng-template  matStepLabel errorMessage="complete the input">Personal Details</ng-template>
+      
       <div>
         <table cellspacing="0">
           <tr>
