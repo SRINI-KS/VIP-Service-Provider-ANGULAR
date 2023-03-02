@@ -16,9 +16,7 @@
 .container-class *{
   margin:5px;
 }
-.container-class .widt {
-  width: 100%;
-}
+
 .container-class-1 *{
 
   margin:5px;
@@ -43,4 +41,20 @@ justify-content: center;
 }
 .example-card {
   max-width: auto;
+}
+.body-register{
+  display: flex;
+justify-content: center;
+
+}
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.widt {
+  
+  margin-left: 20px;
 }

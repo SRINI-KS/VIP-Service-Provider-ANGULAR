@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UserRegister } from 'src/app/Models/Register/Register-Class/user-register';
 import { LoginComponent } from '../Auth/login/login.component';
 import { RegisterComponent } from '../Auth/register/register.component';
@@ -14,7 +15,7 @@ userNameForWelcome:string="";
   profileName:any;
 
 
-  constructor(private dialog:MatDialog){}
+  constructor(private dialog:MatDialog,private router:Router){}
 
   ngOnInit(): void {
   }
@@ -29,8 +30,10 @@ userNameForWelcome:string="";
     this.dialog.open(LoginComponent, {
       width: "30%",
     height: "60%",
+    
       
     });
+    this.router.navigate(['/'])
   }
 
   loggedin(){

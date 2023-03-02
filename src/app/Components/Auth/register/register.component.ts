@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit{
     this.urlService.createRegister(this.userRegisterModel).subscribe(
       (data) => {
         // this.onClose();
+        console.log(data)
         alertyfy.success("Successfully Registerd")
         // this.login();
       },
