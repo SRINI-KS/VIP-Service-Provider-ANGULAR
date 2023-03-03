@@ -28,9 +28,10 @@ userNameForWelcome:string="";
   // }
   login() {
     this.dialog.open(LoginComponent, {
-      width: "30%",
-    height: "60%",
-    
+    //   width: "30%",
+    // height: "60%",
+    panelClass: 'trend-dialog',
+    autoFocus: false,
       
     });
     this.router.navigate(['/'])

@@ -298,7 +298,9 @@
     </mat-card>
   </div> -->
 
-<div class="body-register container card">
+<div class="body-register container card mt-3 w-50 h-100">
+  <div class="card-body">
+  <h3 class="card-title">Register</h3>
   <form [formGroup]="formValidService.userRegisterForms" (ngSubmit)="submitData()">
 
     <mat-stepper orientation="vertical" #stepper>
@@ -503,5 +505,6 @@
  
   </mat-stepper>
 </form>
+</div>
 </div>
 

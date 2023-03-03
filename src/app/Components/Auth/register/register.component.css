@@ -45,7 +45,7 @@ justify-content: center;
 .body-register{
   display: flex;
 justify-content: center;
-
+box-shadow: 1px 1px black ;
 }
 .mat-stepper-vertical {
   margin-top: 8px;
