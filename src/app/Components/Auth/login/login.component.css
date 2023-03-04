@@ -1,43 +1,12 @@
 
-/* .box {
-    
-  position: relative;
-  top: 50px;
-  float: left;
-  padding: 60px 50px 40px 50px;
-}
-.box form{
-    display: flex;
-  flex-direction: column;
-} */
-.example-full-width{
-    width: 100%;
-}
-/* .btn{
-    background-color: rgb(129, 255, 200);
-} */
-/* .title{
-    margin-left: 150px;
-    position: relative;
-    top: 0;
-}
-.register h6 a:hover{
- cursor: pointer;
-} */
-
-/* ---------------- */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 100vh; */
-  background: #eceffc;
-}
 
 .btn {
   padding: 8px 20px;
   border-radius: 0;
   overflow: hidden;
+  /* background-color: aquamarine; */
+  border: 5px solid whitesmoke;
+  
 }
 .btn::before {
   position: absolute;
@@ -52,11 +21,9 @@ body {
 }
 .btn:hover {
   background: transparent;
-  box-shadow: 0 0 20px 10px rgba(51, 152, 219, 0.5);
+  box-shadow: 0 0 20px 10px aquamarine;
 }
-/* .btn:hover::before {
-  transform: translateX(100%);
-} */
+
 
 .form-input-material {
   --input-default-border-color: white;
@@ -72,8 +39,7 @@ body {
   align-items: center;
   padding: 50px 40px;
   color: white;
-  background: rgba(0, 0, 0, 0.8);
-  /* border-radius: 10px; */
+  background: black;
   box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
 }
 .login-form h1 {
@@ -85,4 +51,15 @@ body {
 .login-form .btn {
   width: 100%;
   margin: 18px 0 9px 0;
+  color: white;
 }
+.login-form input{
+  background-color: black;
+  color: white;
+}
+.register{
+  margin-top: 20px;
+}
+.register:hover{
+  
+cursor: pointer;}
