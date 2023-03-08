@@ -297,11 +297,11 @@
       </mat-card-content>
     </mat-card>
   </div> -->
-
-<div class="body-register container card mt-3 w-50 h-100">
-  <div class="card-body">
-  <h3 class="card-title">Register</h3>
-  <form [formGroup]="formValidService.userRegisterForms" (ngSubmit)="submitData()">
+<div class="body-register">
+<div class="card container mt-5" style="background-color: black;">
+  <div class="card-body" >
+  <h3 class="card-title"  style="color: aquamarine; padding-left: 45%; ">Register</h3>
+  <form [formGroup]="formValidService.userRegisterForms" (ngSubmit)="submitData()" >
 
     <mat-stepper orientation="vertical" #stepper>
       <mat-step>
@@ -507,4 +507,4 @@
 </form>
 </div>
 </div>
-
+</div>
