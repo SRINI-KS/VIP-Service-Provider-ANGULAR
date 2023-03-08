@@ -3,3 +3,11 @@
     <app-store-card [prop]="item"></app-store-card>
   </div>
 </div>
+<!-- notification if no querry  -->
+
+<div *ngIf="empty" class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO CUSTOMERS QUERY!</h4>
+    <p>No Query were found.</p>
+  </div>
+</div>
