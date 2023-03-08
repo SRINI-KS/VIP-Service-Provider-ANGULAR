@@ -1,11 +1,17 @@
-.body{
-    height: 100%;
-    width: 100%;
-}
+
 .photo-control {
     min-height: 300px;
     vertical-align: middle;
     text-align: center;
     border: 1px dashed blue;
     margin: 5px;
+  }
+  .container,.card,input,.coll{
+    background-color: black;
+    color: white;
+  }
+
+
+  .heading{
+    color: aquamarine;
   }

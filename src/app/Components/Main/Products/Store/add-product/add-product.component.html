@@ -1,3 +1,4 @@
+<div class="body">
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-8">
@@ -8,8 +9,8 @@
         <div class="card-body">
           <form>
             <div>
-              <tabset #staticTabs>
-                <tab heading=" Basic Info">
+              <tabset #staticTabs type="pills" >
+                <tab style="color: aquamarine;" heading=" Basic Info" >
                   <div>
                 
                     <div class="form-group col-12 pt-4">
@@ -92,7 +93,7 @@
                     </button>
                   </div>
                 </tab>
-                <tab heading="Address">
+                <tab class="heading" heading="Address">
                   <div class="form-group col-12">
                     <label>Floor</label>
                     <input type="text" class="form-control" />
@@ -129,7 +130,7 @@
                     </button>
                   </div>
                 </tab>
-                <tab heading="Other Details">
+                <tab class="heading" heading="Other Details">
                   <div class="form-group col-12">
                     <label>Ready to Move</label><br />
                     <input type="radio" id="Yes" value="1" name="RTM" />
@@ -142,17 +143,16 @@
                   <div class="form-group col-3">
                     <label>Possession/Avaialble From</label>
                     <div class="col-xs-12 col-12 col-md-5 form-group mb-3 ">
-                      <input
-                        type="text"
-                        placeholder="Datepicker"
-                        class="form-control "
-                        bsDatepicker
-                        [bsConfig]="{
-                          isAnimated: true,
-                          dateInputFormat: 'YYYY-MM-DD',
-                          containerClass: ' theme-dark-blue'
-                        }"
-                      />
+                      <mat-form-field appearance="outline">
+                        <mat-label>Enter a date range</mat-label>
+                        <mat-date-range-input [rangePicker]="picker">
+                          <input matStartDate placeholder="Start date">
+                          <input matEndDate placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                      </mat-form-field>
                     </div>
                   </div>
 
@@ -196,7 +196,7 @@
                     </button>
                   </div>
                 </tab>
-                <tab heading="Photos">
+                <tab class="heading" heading="Photos">
                   <div class="form-group col-12">
                     <div class="photo-control">
                       <button class="mt-5" type="button">Upload</button> <br />
@@ -234,3 +234,5 @@
     </div>
   </div>
 </div>
+</div>
+

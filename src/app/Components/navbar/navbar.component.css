@@ -12,6 +12,8 @@
     justify-content: space-between;
     background-color:black;
     height: 70px;
+    border-bottom: 1px solid aquamarine;
+   
 }
 .navbar a{
     text-decoration: none;
@@ -65,3 +67,4 @@ ul{
         max-height: 100%;
     }
 }
+

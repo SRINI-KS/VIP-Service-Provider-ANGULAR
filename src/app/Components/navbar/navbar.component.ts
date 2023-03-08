@@ -30,8 +30,7 @@ userNameForWelcome:string="";
     this.dialog.open(LoginComponent, {
     //   width: "30%",
     // height: "60%",
-    panelClass: 'trend-dialog',
-    autoFocus: false,
+   
       
     });
     this.router.navigate(['/'])
@@ -48,7 +47,9 @@ userNameForWelcome:string="";
     
   }
   logOut(){
+    this.router.navigate(['/'])
     localStorage.removeItem('UserLogin')
+    
     
   }
 
