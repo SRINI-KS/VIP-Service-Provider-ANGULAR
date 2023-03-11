@@ -1,7 +1,13 @@
 export class PropertyData {
-    id!:number;
-    type!:string;
-    price!:string;
-    image?:string;
-    
+
+    typeOfWork!:string;
+    place!:string;
+    problemDetails!:string;
+    costOfWork!:number|null;
+    daysOfWork!:number|null;
+    chargesFProvider!:number|null;
+    geoLocation!:string;
+    workStartDate!:string;
+    workEndDate!:string;
+    image!:string;
 }

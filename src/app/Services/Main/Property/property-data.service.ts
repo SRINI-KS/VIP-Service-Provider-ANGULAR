@@ -14,4 +14,10 @@ export class PropertyDataService {
   public getData():Observable<PropertyData[]>{
     return this.http.get<PropertyData[]>(`${this.baseUrl}/listProperty`);
   }
+
+  public postDate(data:PropertyData):Observable<any>{
+    return this.http.post<any>(`${this.baseUrl}/addQuery`,data);
+
+ }
+
 }

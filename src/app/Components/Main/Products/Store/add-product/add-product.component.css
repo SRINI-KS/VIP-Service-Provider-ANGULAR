@@ -6,7 +6,7 @@
     border: 1px dashed blue;
     margin: 5px;
   }
-  .container,.card,input,.coll{
+  .container,.card{
     background-color: black;
     color: white;
   }
@@ -14,4 +14,9 @@
 
   .heading{
     color: aquamarine;
+  }
+
+  .colour .inpcol input{
+    background-color: transparent!important;
+    color: black!important;
   }
