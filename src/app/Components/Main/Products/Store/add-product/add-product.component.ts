@@ -7,6 +7,7 @@ import { GeoLocationService } from 'src/app/Services/GeoLoaction/geo-location.se
 import { PropertyDataService } from 'src/app/Services/Main/Property/property-data.service';
 import { StoreProductsComponent } from '../store-products/store-products.component';
 import * as alertyfy from 'alertifyjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-product',
@@ -78,8 +79,10 @@ addProblemData(){
     (data)=>{
       console.log(data)
       alertyfy.success('Query added Successfully')
+    },
+    (Error:HttpErrorResponse)=>{
+      alertyfy.error("Verify the entered input");
     }
   )
 }
-
 }
